@@ -1,0 +1,572 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+
+<head>
+<base href="http://www.cs.princeton.edu/~wayne/kleinberg-tardos/">
+<link rel="apple-touch-icon" href="http://www.princeton.edu/main/apple-touch-icon.png"></link>
+<link rel="shortcut icon"    href="http://www.princeton.edu/main/favicon.ico"></link>
+
+<link rel="stylesheet"    href="http://www.cs.princeton.edu/~wayne/kleinberg-tardos/kleinberg-tardos.css"   type="text/css" media="screen"></link>
+
+<!-- IE HACKS -->
+<!--[if IE]>
+<style type="text/css" media="screen">
+ #menu ul li {float: left; width: 100%;}
+</style>
+<![endif]-->
+<!--[if lt IE 7]>
+<style type="text/css" media="screen">
+body {
+behavior: url(/csshover.htc);
+} 
+#menu ul li {float: left; width: 100%;}
+#menu ul li a {height: 1%;} 
+
+#menu a, #menu h2 {
+font: bold 0.9em/1.5em arial, helvetica, sans-serif;
+} 
+
+</style>
+<![endif]-->
+
+
+
+<title>
+Lecture Slides for Algorithm Design by Jon Kleinberg And &#201va Tardos
+</title>
+
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8">
+<META NAME="AUTHOR" CONTENT="Kevin Wayne">
+<META NAME="KEYWORDS" CONTENT="Kevin Wayne,Eva,Tardos,Jon,Kleinberg,Algorithm,Design,Lecture,Slides,data,structures">
+<META NAME="DESCRIPTION" CONTENT="Lecture Slides for Algorithm Design by Jon Kleinberg and &#201;va Tardos">
+<META NAME="TITLE" CONTENT="Lecture Slides for Algorithm Design by Jon Kleinberg and &#201;va Tardos">
+<META NAME="ROBOTS" CONTENT="INDEX,FOLLOW">
+
+</head>
+
+
+<body>
+
+<div id = "menu">
+<div align="center">
+<a class = picture href="http://amzn.to/VjhioK">
+<img src="kleinberg-tardos.jpg" width=200 border=0 alt = "Algorithm Design by Jon Kleinberg and Eva Tardos">
+</a>  
+</div>
+
+
+
+
+<ul>
+  <li><a class = title href = "http://amzn.to/VjhioK">Algorithm Design</a>
+
+<ul>
+
+
+      <li> <a href = "pdf/01StableMatching.pdf">&nbsp;&nbsp;1.&nbsp;&nbsp;Representative Problems</a>
+        <ul>
+          <li> <a href = "pdf/01StableMatching.pdf">1.1&nbsp; Stable Matching</a>
+          <li> <a href = "pdf/01StableMatching.pdf">1.2&nbsp; Five Represenative Problems</a>
+        </ul>
+
+      <li> <a href = "pdf/02AlgorithmAnalysis.pdf">&nbsp;&nbsp;2.&nbsp;&nbsp;Algorithm Analysis</a>
+        <ul>
+          <li> <a href = "pdf/02AlgorithmAnalysis.pdf">2.1&nbsp; Computational Tractability</a>
+          <li> <a href = "pdf/02AlgorithmAnalysis.pdf">2.2&nbsp; Asymptotic Order of Growth</a>
+          <li> <a href = "pdf/02AlgorithmAnalysis.pdf">2.3&nbsp; Common Running Times</a>
+        </ul>
+
+      <li> <a href = "pdf/03Graphs.pdf">&nbsp;&nbsp;3.&nbsp;&nbsp;Graphs</a>
+        <ul>
+          <li> <a href = "pdf/03Graphs.pdf">3.1&nbsp; Basic Definition</a>
+          <li> <a href = "pdf/03Graphs.pdf">3.2&nbsp; Connectivity and Traversal</a>
+          <li> <a href = "pdf/03Graphs.pdf">3.3&nbsp; Implementing Graph Search</a>
+          <li> <a href = "pdf/03Graphs.pdf">3.4&nbsp; Bipartiteness</a>
+          <li> <a href = "pdf/03Graphs.pdf">3.5&nbsp; Connectivity in Digraphs</a>
+          <li> <a href = "pdf/03Graphs.pdf">3.6&nbsp; Topological Order in DAGs</a>
+        </ul>
+
+      <li> <a href = "pdf/04GreedyAlgorithmsI.pdf">&nbsp;&nbsp;4.&nbsp;&nbsp;Greedy Algorithms</a>
+        <ul>
+          <li> <a href = "pdf/04GreedyAlgorithmsI.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Coin Changing</font></a>
+          <li> <a href = "pdf/04GreedyAlgorithmsI.pdf">4.1&nbsp; Interval Scheduling</a>
+          <li> <a href = "pdf/04GreedyAlgorithmsI.pdf">4.2&nbsp; Minimizing Lateness</a>
+          <li> <a href = "pdf/04GreedyAlgorithmsI.pdf">4.3&nbsp; Optimal Caching</a>
+          <li> <a href = "pdf/04GreedyAlgorithmsI.pdf">4.4&nbsp; Shortest Paths in a Graph</a>
+          <li> <a href = "pdf/04GreedyAlgorithmsII.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Minimum Spanning Trees</font></a>
+          <li> <a href = "pdf/04GreedyAlgorithmsII.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Prim, Kruskal, Borůvka</font></a>
+          <li> <a href = "pdf/04GreedyAlgorithmsII.pdf">4.7&nbsp; Single-Link Clustering</a>
+          <li> <a href = "pdf/04HuffmanCodes.pdf">4.9&nbsp; Min-Cost Arborescences</a>
+        </ul>
+
+      <li> <a href = "pdf/05DivideAndConquerI.pdf">&nbsp;&nbsp;5.&nbsp;&nbsp;Divide and Conquer</a>
+        <ul>
+          <li> <a href = "pdf/05DivideAndConquerI.pdf">5.1&nbsp; Mergesort</a>
+          <li> <a href = "pdf/05DivideAndConquerI.pdf">5.3&nbsp; Counting Inversions</a>
+          <li> <a href = "pdf/05DivideAndConquerI.pdf">5.4&nbsp; Closest Pair of Points</a>
+          <li> <a href = "pdf/05DivideAndConquerI.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Randomized Quicksort</font></a>
+          <li> <a href = "pdf/05DivideAndConquerI.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Median and Selection</font></a>
+          <li> <a href = "pdf/05DivideAndConquerII.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Master Theorem</font></a>
+          <li> <a href = "pdf/05DivideAndConquerII.pdf">5.5&nbsp; Karatsuba's Algorithm</a>
+          <li> <a href = "pdf/05DivideAndConquerII.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Strassen's Algorithm</font></a>
+          <li> <a href = "pdf/05DivideAndConquerII.pdf">5.6&nbsp; Convolution and FFT</a>
+        </ul>
+
+      <li> <a href = "pdf/06DynamicProgrammingI.pdf">&nbsp;&nbsp;6.&nbsp;&nbsp;Dynamic Programming</a>
+        <ul>
+          <li> <a href = "pdf/06DynamicProgrammingI.pdf">6.1&nbsp; Weighted Interval Scheduling</a>
+          <li> <a href = "pdf/06DynamicProgrammingI.pdf">6.2&nbsp; Segmented Least Squares</a>
+          <li> <a href = "pdf/06DynamicProgrammingI.pdf">6.3&nbsp; Knapsack Problem</a>
+          <li> <a href = "pdf/06DynamicProgrammingI.pdf">6.4&nbsp; RNA Secondary Structure</a>
+          <li> <a href = "pdf/06DynamicProgrammingII.pdf">6.5&nbsp; Sequence Alignment</a>
+          <li> <a href = "pdf/06DynamicProgrammingII.pdf">6.6&nbsp; Hirschberg's Algorithm</a>
+          <li> <a href = "pdf/06DynamicProgrammingII.pdf">6.7&nbsp; Bellman-Ford Algorithm</a>
+          <li> <a href = "pdf/06DynamicProgrammingII.pdf">6.8&nbsp; Distane Vector Protocol</a>
+          <li> <a href = "pdf/06DynamicProgrammingII.pdf">6.9&nbsp; Negative Cycles</a>
+        </ul>
+
+      <li> <a href = "pdf/07NetworkFlowI.pdf">&nbsp;&nbsp;7.&nbsp;&nbsp;Network Flow</a>
+        <ul>
+          <li> <a href = "pdf/07NetworkFlowI.pdf">7.1&nbsp; Max-Flow and Min-Cut</a>
+          <li> <a href = "pdf/07NetworkFlowI.pdf">7.2&nbsp; Ford-Fulkerson Algorithm</a>
+          <li> <a href = "pdf/07NetworkFlowI.pdf">7.3&nbsp; Capacity-Scaling</a>
+          <li> <a href = "pdf/07NetworkFlowI.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Shortest Augmenting Path</font></a>
+          <li> <a href = "pdf/07NetworkFlowI.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Blocking Flow</font></a>
+          <li> <a href = "pdf/07NetworkFlowI.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Unit Capacity Networks</font></a>
+          <li> <a href = "pdf/07NetworkFlowII.pdf">7.4&nbsp; Bipartite Matching</a>
+          <li> <a href = "pdf/07NetworkFlowII.pdf">7.5&nbsp; Disjoint Paths</a>
+          <li> <a href = "pdf/07NetworkFlowII.pdf">7.6&nbsp; Demands and Lower Bounds</a>
+          <li> <a href = "pdf/07NetworkFlowII.pdf">7.7&nbsp; Survey Design</a>
+          <li> <a href = "pdf/07NetworkFlowII.pdf">7.8&nbsp; Airline Scheduling</a>
+          <li> <a href = "pdf/07NetworkFlowII.pdf">7.9&nbsp; Image Segmentation</a>
+          <li> <a href = "pdf/07NetworkFlowII.pdf">7.10&nbsp; Project Selection</a>
+          <li> <a href = "pdf/07NetworkFlowII.pdf">7.11&nbsp; Baseball Elimination</a>
+          <li> <a href = "pdf/07NetworkFlowIII.pdf">7.12&nbsp; Assignment Problem</a>
+        </ul>
+
+      <li> <a href = "pdf/08IntractabilityI.pdf">&nbsp;&nbsp;8.&nbsp;&nbsp;Intractability</a>
+        <ul>
+          <li> <a href = "pdf/08IntractabilityI.pdf">8.1&nbsp; Polynomial-Time Reductions</a>
+          <li> <a href = "pdf/08IntractabilityI.pdf">8.2&nbsp; Vertex Cover</a>
+          <li> <a href = "pdf/08IntractabilityI.pdf">8.3&nbsp; Independent Set</a>
+          <li> <a href = "pdf/08IntractabilityI.pdf">8.4&nbsp; Set Cover</a>
+          <li> <a href = "pdf/08IntractabilityI.pdf">8.5&nbsp; 3-Satisfiability</a>
+          <li> <a href = "pdf/08IntractabilityI.pdf">8.6&nbsp; Hamiltonian Cycle</a>
+          <li> <a href = "pdf/08IntractabilityI.pdf">8.7&nbsp; 3-Dimensional Matching</a>
+          <li> <a href = "pdf/08IntractabilityI.pdf">8.8&nbsp; Graph 3-Colorability</a>
+          <li> <a href = "pdf/08IntractabilityI.pdf">8.9&nbsp; Subset Sum</a>
+          <li> <a href = "pdf/08IntractabilityII.pdf">8.10&nbsp; P vs. NP</a>
+          <li> <a href = "pdf/08IntractabilityII.pdf">8.11&nbsp; NP-Completeness</a>
+          <li> <a href = "pdf/08IntractabilityII.pdf">8.12&nbsp; co-NP</a>
+        </ul>
+
+      <li> <a href = "pdf/09PSPACE.pdf">&nbsp;&nbsp;9.&nbsp;&nbsp;PSPACE</a>
+        <ul>
+          <li> <a href = "pdf/09PSPACE.pdf">9.1&nbsp; PSPACE</a>
+          <li> <a href = "pdf/09PSPACE.pdf">9.2&nbsp; Quantified SAT</a>
+          <li> <a href = "pdf/09PSPACE.pdf">9.3&nbsp; Planning Problem</a>
+          <li> <a href = "pdf/09PSPACE.pdf">9.4&nbsp; PSPACE-Complete</a>
+        </ul>
+
+      <li> <a href = "pdf/10ExtendingTractability.pdf">10.&nbsp;&nbsp;Limits of Tractability</a>
+        <ul>
+          <li> <a href = "pdf/10ExtendingTractability.pdf">10.1&nbsp; Small Vertex Covers</a>
+          <li> <a href = "pdf/10ExtendingTractability.pdf">10.2&nbsp; NP-Hard Problems on Trees</a>
+          <li> <a href = "pdf/10ExtendingTractability.pdf">10.3&nbsp; Circular Arc Coloring</a>
+          <li> <a href = "pdf/10ExtendingTractability.pdf"><font color = #504A4B>&nbsp;&ndash;&nbsp;&nbsp;&nbsp;&nbsp;Bipartite Vertex Cover</font></a>
+        </ul>
+
+      <li> <a href = "pdf/11ApproximationAlgorithms.pdf">11.&nbsp;&nbsp;Approximation Algorithms</a>
+        <ul>
+          <li> <a href = "pdf/11ApproximationAlgorithms.pdf">11.1&nbsp; Load Balancing</a>
+          <li> <a href = "pdf/11ApproximationAlgorithms.pdf">11.2&nbsp; Center Selection</a>
+          <li> <a href = "pdf/11ApproximationAlgorithms.pdf">11.3&nbsp; Vertex Cover</a>
+          <li> <a href = "pdf/11ApproximationAlgorithms.pdf">11.4&nbsp; Weighted Vertex Cover</a>
+          <li> <a href = "pdf/11ApproximationAlgorithms.pdf">11.5&nbsp; Generalized Load Balancing</a>
+          <li> <a href = "pdf/11ApproximationAlgorithms.pdf">11.6&nbsp; Knapsack Problem</a>
+        </ul>
+
+      <li> <a href = "pdf/12LocalSearch.pdf">12.&nbsp;&nbsp;Local Search</a>
+        <ul>
+          <li> <a href = "pdf/12LocalSearch.pdf">12.1&nbsp; Gradient Descent</a>
+          <li> <a href = "pdf/12LocalSearch.pdf">12.2&nbsp; Metropolis Algorithm</a>
+          <li> <a href = "pdf/12LocalSearch.pdf">12.3&nbsp; Hopfield Neural Networks</a>
+          <li> <a href = "pdf/12LocalSearch.pdf">12.4&nbsp; Maximum Cut</a>
+          <li> <a href = "pdf/12LocalSearch.pdf">11.5&nbsp; Nash Equilibria</a>
+        </ul>
+
+      <li> <a href = "pdf/13RandomizedAlgorithms.pdf">13.&nbsp;&nbsp;Randomized Algorithms</a>
+        <ul>
+          <li> <a href = "pdf/13RandomizedAlgorithms.pdf">13.1&nbsp; Contention Resolution</a>
+          <li> <a href = "pdf/13RandomizedAlgorithms.pdf">13.2&nbsp; Global Min Cut</a>
+          <li> <a href = "pdf/13RandomizedAlgorithms.pdf">13.3&nbsp; Linearity of Expectation</a>
+          <li> <a href = "pdf/13RandomizedAlgorithms.pdf">13.4&nbsp; Max 3-SAT</a>
+          <li> <a href = "pdf/13RandomizedAlgorithms.pdf">13.5&nbsp; Universal Hashing</a>
+          <li> <a href = "pdf/13RandomizedAlgorithms.pdf">13.6&nbsp; Chernoff Bounds</a>
+          <li> <a href = "pdf/13RandomizedAlgorithms.pdf">13.7&nbsp; Load Balancing</a>
+        </ul>
+    </ul>
+
+
+
+
+  <li><a class = title>Extra Topics</a>
+  <ul>
+     <li><a href = "pdf/AmortizedAnalysis.pdf">Data Structures</a>
+     <ul>
+        <li><a href = "pdf/AmortizedAnalysis.pdf">Amortized Analysis</a>
+        <li><a href = "pdf/BinomialHeaps.pdf">Binomial Heaps</a>
+        <li><a href = "pdf/FibonacciHeaps.pdf">Fibonacci Heaps</a>
+        <li><a href = "pdf/UnionFind.pdf">Disjoint Sets</a>
+     </ul>
+     <li><a href = "pdf/LinearProgrammingI.pdf">Linear Programming</a>
+     <ul>
+         <li><a href = "pdf/LinearProgrammingI.pdf">Simplex Algorithm</a>
+         <li><a href = "pdf/LinearProgrammingII.pdf">Linear Programming Duality</a>
+         <li><a href = "pdf/LinearProgrammingIII.pdf">Ellipsoid Algorithm</a>
+     </ul>
+   </ul>
+
+</ul>
+</div>
+
+
+<div id = "content">
+<h1 class = center>
+Lecture Slides for Algorithm Design
+</h1>
+
+<p><br>
+
+These are a revised version of the lecture slides 
+that accompany the textbook 
+<a href="http://amzn.to/VjhioK"><em>Algorithm Design</em></a>
+by Jon Kleinberg and &#201;va Tardos.
+Here are the original and official version of the 
+<a href = "pearson">slides</a>, distributed by 
+<a href = "http://www.aw-bc.com/info/kleinberg/supplements.html">Addison-Wesley</a>.
+
+<p><br>
+
+
+
+
+<p>
+
+
+<center>
+<table cellspacing="1" cellpadding="4" border="0" bgcolor="#ffffff">
+
+<tr align=center>
+<th width=250>TOPIC</th>
+<th width=80>SLIDES</th>
+<th width=150>READINGS</th>
+<th width=250>DEMOS</th>
+<!-- <th width=160>SUPPLEMENTAL</th> -->
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Introduction</b><br>(<em>administrative information</em>)</td>
+<td><a title = "Introduction" href="pdf/00Introduction.pdf">1up</a> &middot; <a title = "Introduction" href="pdf/00Introduction-2x2.pdf">4up</a></td>
+<td><a href = "http://www.aw-bc.com/info/kleinberg/assets/downloads/preface.pdf">Preface</a> &middot; <a href = "http://www.aw-bc.com/info/kleinberg/assets/downloads/toc.pdf">ToC</a></td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Stable Matching</b><br>(<em>Gale-Shapley</em>)</td>
+<td><a title = "Stable Matching" href="pdf/01StableMatching.pdf">1up</a> &middot; <a title = "Stable Matching" href="pdf/01StableMatching-2x2.pdf">4up</a></td>
+<td><a href = "http://www.aw-bc.com/info/kleinberg/assets/downloads/ch1.pdf">Chapter 1</a></td>
+<td><a href = "pdf/01DemoGaleShapley.pdf">Gale-Shapley</a></td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Algorithm Analysis</b><br>(<em>big-Oh notation</em>)</td>
+<td><a title = "Algorithm Analysis" href="pdf/02AlgorithmAnalysis.pdf">1up</a> &middot; <a title = "Algorithm Analysis" href="pdf/02AlgorithmAnalysis-2x2.pdf">4up</a></td>
+<td>Chapter 2</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Graphs</b><br>(<em>graph search</em>)</td>
+<td><a title = "Graphs" href="pdf/03Graphs.pdf">1up</a> &middot; <a title = "Graphs" href="pdf/03Graphs-2x2.pdf">4up</a></td>
+<td>Chapter 3</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Greedy Algorithms I</b><br>(<em>basic techniques</em>)</td>
+<td><a title = "Greedy Algorithms I" href="pdf/04GreedyAlgorithmsI.pdf">1up</a> &middot; <a title = "Greedy Algorithms I" href="pdf/04GreedyAlgorithmsI-2x2.pdf">4up</a></td>
+<td>Chapter 4</td>
+<td><a href = "pdf/04DemoEarliestFinishTimeFirst.pdf">interval scheduling</a> &middot; <a href = "pdf/04DemoEarliestStartTimeFirst.pdf">interval partitioning</a></td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Greedy Algorithms II</b><br>(<em>shortest paths and MSTs</em>)</td>
+<td><a title = "Greedy Algorithms II" href="pdf/04GreedyAlgorithmsII.pdf">1up</a> &middot; <a title = "Greedy Algorithms II" href="pdf/04GreedyAlgorithmsII-2x2.pdf">4up</a></td>
+<td>Chapter 4</td>
+<td><a href = "pdf/04DemoDijkstra.pdf">Dijkstra</a> &middot; <a href = "pdf/04DemoRedBlue.pdf">red-blue</a> &middot; <a href = "pdf/04DemoPrim.pdf">Prim</a> &middot; <br> <a href = "pdf/04DemoKruskal.pdf">Kruskal</a> &middot; <a href = "pdf/04DemoBoruvka.pdf">Bor&#367;vka</a> &middot; <a href = "pdf/04DemoEdmondsBranching.pdf">Edmonds</a></td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Divide and Conquer I</b><br>(<em>sorting and selection</em>)</td>
+<td><a title = "Divide and Conquer I" href="pdf/05DivideAndConquerI.pdf">1up</a> &middot; <a title = "Divide and Conquer I" href="pdf/05DivideAndConquerI-2x2.pdf">4up</a></td>
+<td>Chapter 5</td>
+<td><a href = "pdf/05DemoMerge.pdf">merging</a> &middot; <a href = "pdf/05DemoMergeInvert.pdf">inversions</a> &middot; <a href = "pdf/05DemoQuickSelect.pdf">quickselect</a></td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Divide and Conquer II</b><br>(<em>integer and polynomial multiplication</em>)</td>
+<td><a title = "Divide and Conquer II" href="pdf/05DivideAndConquerII.pdf">1up</a> &middot; <a title = "Divide and Conquer II" href="pdf/05DivideAndConquerII-2x2.pdf">4up</a></td>
+<td>Chapter 5</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Dynamic Programming I</b><br>(<em>basic techniques</em>)</td>
+<td><a title = "Dynamic Programming I" href="pdf/06DynamicProgrammingI.pdf">1up</a> &middot; <a title = "Dynamic Programming I" href="pdf/06DynamicProgrammingI-2x2.pdf">4up</a></td>
+<td><a href = "http://www.aw-bc.com/info/kleinberg/assets/downloads/ch6.pdf">Chapter 6</a></td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Dynamic Programming II</b><br>(<em>sequence alignment, Bellman-Ford</em>)</td>
+<td><a title = "Dynamic Programming II" href="pdf/06DynamicProgrammingII.pdf">1up</a> &middot; <a title = "Dynamic Programming II" href="pdf/06DynamicProgrammingII-2x2.pdf">4up</a></td>
+<td><a href = "http://www.aw-bc.com/info/kleinberg/assets/downloads/ch6.pdf">Chapter 6</a></td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Network Flow I</b><br>(<em>maximum flow theory</em>)</td>
+<td><a title = "Network Flow I" href="pdf/07NetworkFlowI.pdf">1up</a> &middot; <a title = "Network Flow I" href="pdf/07NetworkFlowI-2x2.pdf">4up</a></td>
+<td>Chapter 7</td>
+<td><a href = "pdf/07DemoFordFulkerson.pdf">Ford-Fulkerson</a> &middot; <a href = "pdf/07DemoFordFulkersonPathological.pdf">pathological</a></td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Network Flow II</b><br>(<em>maximum flow applications</em>)</td>
+<td><a title = "Network Flow II" href="pdf/07NetworkFlowII.pdf">1up</a> &middot; <a title = "Network Flow II" href="pdf/07NetworkFlowII-2x2.pdf">4up</a></td>
+<td>Chapter 7</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Network Flow III</b><br>(<em>assignment problem</em>)</td>
+<td><a title = "Network Flow III" href="pdf/07NetworkFlowIII.pdf">1up</a> &middot; <a title = "Network Flow III" href="pdf/07NetworkFlowIII-2x2.pdf">4up</a></td>
+<td>Chapter 7</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Intractability I</b><br>(<em>polynomial-time reductions</em>)</td>
+<td><a title = "Intractability I" href="pdf/08IntractabilityI.pdf">1up</a> &middot; <a title = "Intractability I" href="pdf/08IntractabilityI-2x2.pdf">4up</a></td>
+<td>Chapter 8</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Intractability II</b><br>(<em>P, NP, and NP-complete</em>)</td>
+<td><a title = "Intractability II" href="pdf/08IntractabilityII.pdf">1up</a> &middot; <a title = "Intractability II" href="pdf/08IntractabilityII-2x2.pdf">4up</a></td>
+<td>Chapter 8</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Intractability III</b><br>(<em>coping with intractability</em>)</td>
+<td><a title = "Intractability III" href="pdf/IntractabilityIII.pdf">1up</a> &middot; <a title = "Intractability III" href="pdf/IntractabilityIII-2x2.pdf">4up</a></td>
+<td>Section 10.2, 11.8</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>PSPACE</b><br>(<em>PSPACE complexity class</em>)</td>
+<td><a title = "PSPACE" href="pdf/09PSPACE.pdf">1up</a> &middot; <a title = "PSPACE" href="pdf/09PSPACE-2x2.pdf">4up</a></td>
+<td>Chapter 9</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Limits of Tractability</b><br>(<em>extending limits of tractability</em>)</td>
+<td><a title = "Limits of Tractability" href="pdf/10ExtendingTractability.pdf">1up</a> &middot; <a title = "Limits of Tractability" href="pdf/10ExtendingTractability-2x2.pdf">4up</a></td>
+<td>Chapter 10</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Approximation Algorithms</b><br>(<em>approximation algorithms</em>)</td>
+<td><a title = "Approximation Algorithms" href="pdf/11ApproximationAlgorithms.pdf">1up</a> &middot; <a title = "Approximation Algorithms" href="pdf/11ApproximationAlgorithms-2x2.pdf">4up</a></td>
+<td>Chapter 11</td>
+<td><a href = "pdf/11DemoListScheduling.pdf">list scheduling</a></td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Local Search</b><br>(<em>Metropolis, Hopfield nets</em>)</td>
+<td><a title = "Local Search" href="pdf/12LocalSearch.pdf">1up</a> &middot; <a title = "Local Search" href="pdf/12LocalSearch-2x2.pdf">4up</a></td>
+<td>Chapter 12</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Randomized Algorithms</b><br>(<em>randomized algorithms</em>)</td>
+<td><a title = "Randomized Algorithms" href="pdf/13RandomizedAlgorithms.pdf">1up</a> &middot; <a title = "Randomized Algorithms" href="pdf/13RandomizedAlgorithms-2x2.pdf">4up</a></td>
+<td>Chapter 13</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Data Structures I</b><br>(<em>amortized analysis</em>)</td>
+<td><a title = "Data Structures I" href="pdf/AmortizedAnalysis.pdf">1up</a> &middot; <a title = "Data Structures I" href="pdf/AmortizedAnalysis-2x2.pdf">4up</a></td>
+<td>Chapter 17<br>(<em>CLRS</em>)</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Data Structures II</b><br>(<em>binary and binomial heaps</em>)</td>
+<td><a title = "Data Structures II" href="pdf/BinomialHeaps.pdf">1up</a> &middot; <a title = "Data Structures II" href="pdf/BinomialHeaps-2x2.pdf">4up</a></td>
+<td>Chapter 6<br>(<em>CLRS, 2nd edition</em>)</td>
+<td><a href = "pdf/DemoBinaryHeap.pdf">binary heap</a> &middot; <a href = "pdf/DemoHeapify.pdf">heapify</a></td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Data Structures III</b><br>(<em>Fibonacci heaps</em>)</td>
+<td><a title = "Data Structures III" href="pdf/FibonacciHeaps.pdf">1up</a> &middot; <a title = "Data Structures III" href="pdf/FibonacciHeaps-2x2.pdf">4up</a></td>
+<td>Chapter 19<br>(<em>CLRS</em>)</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Data Structures IV</b><br>(<em>union-find</em>)</td>
+<td><a title = "Data Structures IV" href="pdf/UnionFind.pdf">1up</a> &middot; <a title = "Data Structures IV" href="pdf/UnionFind-2x2.pdf">4up</a></td>
+<td><a href = "http://www.cs.berkeley.edu/~vazirani/algorithms/chap5.pdf">Section 5.1.4</a><br>(<em>Dasgupta et al.</em>)</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Linear Programming I</b><br>(<em>simplex algorithm</em>)</td>
+<td><a title = "Linear Programming I" href="pdf/LinearProgrammingI.pdf">1up</a> &middot; <a title = "Linear Programming I" href="pdf/LinearProgrammingI-2x2.pdf">4up</a></td>
+<td>(<em>Chvatal</em>)</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Linear Programming II</b><br>(<em>linear programming duality</em>)</td>
+<td><a title = "Linear Programming II" href="pdf/LinearProgrammingII.pdf">1up</a> &middot; <a title = "Linear Programming II" href="pdf/LinearProgrammingII-2x2.pdf">4up</a></td>
+<td>(<em>Chvatal</em>)</td>
+<td>&ndash;</td>
+</tr>
+
+<tr align=center bgcolor="#ebebeb">
+<td><b>Linear Programming III</b><br>(<em>ellipsoid algorithm</em>)</td>
+<td><a title = "Linear Programming III" href="pdf/LinearProgrammingIII.pdf">1up</a> &middot; <a title = "Linear Programming III" href="pdf/LinearProgrammingIII-2x2.pdf">4up</a></td>
+<td>Lecture notes<br>(<em><a href = "http://math.mit.edu/~goemans/18433S07/ellipsoid.pdf">Michel Goemans</a></em>)</td>
+<td>&ndash;</td>
+</tr>
+
+
+</table>
+</center>
+
+
+<p><br><br>
+<h2>References.</h2>
+The lectures slides are based primarily on the textbook:
+
+<ul>
+
+<p><li>
+<a href="http://amzn.to/VjhioK"><em>Algorithm Design</em></a>
+by Jon Kleinberg and &#201;va Tardos. Addison-Wesley, 2005.
+<!-- ISBN 978-0321295354. -->
+</ul>
+
+Some of the lecture slides are based on material from the following books:
+
+<ul>
+
+<p><li><a href = "http://amzn.to/18B7f4a"><em>Introduction to Algorithms, Third Edition</em></a> by
+Thomas Cormen, Charles Leiserson, Ronald Rivest, and Clifford Stein. MIT Press, 2009.
+<!-- ISBN 978-0262033848. -->
+
+<!--
+<p><li><a href = "http://www.cs.uiuc.edu/~jeffe/teaching/algorithms"><em>Algorithms</em></a>
+by Jeff Erickson.
+-->
+
+<p><li><a href = "http://amzn.to/16UKh6f"><em>Algorithms</em></a>
+by Sanjoy Dasgupta, Christos Papadimitriou, and Umesh Vazirani.
+McGraw Hill, 2006.
+<!-- ISBN 978-0073523408. -->
+
+<p><li><a href = "http://amzn.to/1bjybLw"><em>The Design and Analysis of Algorithms</em></a> by
+Dexter Kozen. Springer, 1992.
+<!-- ISBN 978-0387976877. -->
+
+<p><li><a href = "http://amzn.to/18AWmkE"><em>Algorithms 4/e</em></a>
+by Robert Sedgewick and Kevin Wayne. Addison-Wesley Professional, 2011.
+
+<p><li><a href = "http://amzn.to/1fzGZ1J"><em>Data Structures and Network Algorithms</em></a>
+by Robert Tarjan.
+Society for Industrial and Applied Mathematics, 1987.
+<!-- ISBN 978-0898711875. -->
+
+<p><li><a href = "http://amzn.to/1fzGO6k"><em>Linear Programming</em></a>
+by Vašek Chvátal. W. H. Freeman, 1983.
+<!-- ISBN 978-0-7167-1587-0. -->
+
+</ul>
+
+
+<table cellspacing="1" cellpadding="4" border="0" bgcolor="#ffffff">
+
+<tr>
+<td width = 25>
+
+<!--
+<td>
+<a class = picture href="http://amzn.to/VjhioK">
+<img src="kleinberg-tardos.jpg" height=140 border=0 alt = "Algorithm Design by Jon Kleinberg and Eva Tardos"></a>
+-->
+
+<td>
+<a class = picture href="http://amzn.to/18B7f4a">
+<img src="CLRS.jpg" height=140 border=0 alt = "Introduction to Algorithms by Cormen, Leiserson, Rivest, and Stein"></a>
+
+<td>
+<a class = picture href="http://amzn.to/16UKh6f">
+<img src="dasgupta.jpg" height=140 border=0 alt = "Algorithms by Dasgupta, Papadimitriou, and Vazirani"></a>
+
+<td>
+<a class = picture href="http://amzn.to/1bjybLw">
+<img src="kozen.jpg" height=140 border=0 alt = "The Design and Analysis of Algorithms by Dexter Kozen"></a>
+
+<td>
+<a class = picture href="http://amzn.to/18AWmkE">
+<img src="sedgewick-wayne.png" height=140 border=0 alt = "Algorithms 4/e by Sedgewick and Wayne"></a>
+
+<td>
+<a class = picture href="http://amzn.to/1fzGZ1J">
+<img src="tarjan.jpg" height=140 border=0 alt = "Data Structures and Network Algorithms"></a>
+
+<td>
+<a class = picture href="http://amzn.to/1fzGO6k">
+<img src="chvatal.gif" height=140 border=0 alt = "Linear Programming by Vasek Chvatal"></a>
+
+</tr>
+</table>
+
+
+<p><br>
+<h2>Instructors.</h2>
+If you are an instructor using the textbook and would like the latest
+version of the keynote files, please email
+<a href = "mailto:wayne@cs.princeton.edu">email Kevin Wayne</a>.
+
+
+<p><br>
+<h2>Errata.</h2>
+Here are the known <a href = "errata.html">errata</a> in these lecture slides.
+
+
+<p><br>
+<p><br>
+
