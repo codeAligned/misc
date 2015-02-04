@@ -1,0 +1,278 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% A few modifications made by Razi Shaban to Debarghya Das'
+% phenomenal template
+%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Resume}
+\namesection{Razi}{Shaban}{ %\urlstyle{same}\url{http://razishaban.com} \\
+\href{mailto:rshaban1@swarthmore.edu}{rshaban1@swarthmore.edu} | 610.999.6136
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Swarthmore College}
+%\descript{Computer Science and Linguistics}
+\location{Expected May 2016 | Swarthmore, PA} \\
+Linguistics and Computer Science \\
+\location{Linguistics GPA: 3.925 / 4.0 \\ 
+Computer Science: 3.62 / 4.0} \\
+\sectionsep
+
+\subsection{The John Dewey Academy}
+\location{Grad. Aug 2012 | Great Barrington, MA} \\
+President’s Award for Individual Integrity and Academic Excellence \\Honors Diploma
+\sectionsep
+
+\subsection{American Community \hfill \break School}
+\location{Grad. June 2010 | Amman, Jordan} \\
+Candidate for the Presidential Scholarship \\
+National Merit Scholar \\
+\location{
+SAT: 1600 / 1600 \\
+ACT: 35 / 36
+} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Undergraduate}
+\location{\textit{Computer Science}} \\
+Programming Languages 
+{\footnotesize \textit{\textbf{(CS091) }}}\\
+Natural Language Processing \\
+Artificial Intelligence \\
+Algorithms \\
+Data Structures and Algorithms \\
+Intro to Computer Science
+{\footnotesize \textit{\textbf{(Grader) }}} \\
+\location{\textit{Linguistics}} \\
+Morphology and the Lexicon \\
+Psychology of Language \\
+Symbolic Logic \\
+Syntax \\ 
+Semantics \\
+Hebrew for Text Study I \& II \\
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Over 5000 lines:} \\
+Python \textbullet{}   SAS  \\
+\location{Over 1000 lines:} \\
+Pyret \textbullet{} C++ \textbullet{} JavaScript \textbullet{} PHP \textbullet{} \LaTeX\ \\
+\location{Familiar:}	\\
+SQL \textbullet{} Haskell \textbullet{} OCaml \textbullet{} VisualBasic \\
+\sectionsep
+
+\subsection{Languages}
+\textbf{English \& Arabic}   {\footnotesize \textit{\textbf{native speaker}}}\\
+\textbf{French}   {\footnotesize \textit{\textbf{intermediate}}}\\
+\textbf{Biblical Hebrew}   {\footnotesize \textit{\textbf{elementary}}}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Swarthmore College Helpdesk}
+\descript{| Client Services Associate }
+\location{Fall 2012 - Present | Swarthmore College | Swarthmore, PA} \\
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Assess and respond to computer, network, and device issues for students, faculty, and staff.
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{TriCo Hackathon 2015}
+\descript{| Overall Winner: ReportIt}
+\location{January 2015 | Haverford College | Haverford, PA} \\
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Over 48 hours, I developed ReportIt with two friends. ReportIt is an interactive web platform designed to fill the gap between people in power and the people they represent, making it easy for anyone to publicly report breakdowns in everyday life. 
+\item ReportIt runs on Flask with Jinja2, SQLite, gmaps.js, and jQuery. 
+\item Check out our Github repo at \url{http://rrshaban.github.io/ReportIt/}.
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{NYU Furman Center for Real Estate and Urban Policy \\ }
+\descript{ Research Assistant }
+\location{June 2014 – Aug 2014 | New York University | New York, NY} \\
+\begin{tightemize}
+\item Analyzed data from dozens of public and proprietary datasets to see how residents of public housing projects in New York City have fared over the past thirty years relative to their neighborhoods (pending publication). 
+\item Used ArcMap, SAS, SQL, Python, and ModelBuilder.
+\end{tightemize}
+
+\vspace{\topsep}
+\descript{Research Assistant }
+\location{June 2013 – Aug 2013 | New York University | New York, NY} \\
+\begin{tightemize}
+\item Developed expertise in GIS for city- and state-wide data analysis using census and proprietary databases, including FEMA’s NFHL and PWMs, see \url{http://bit.ly/FCResilience}.
+\item Learned SQL and SAS to convert database processing of the Center’s SHIP project from SQL to SAS, see \url{http://bit.ly/FCData}.
+\item Automated the production of quarterly housing update reports by using Excel's Dynamic Data Exchange via SAS, see \url{http://bit.ly/FCQHRs}.
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{Robotics Summer Program, Ivybound Tutoring \\}
+\descript{Lead Instructor}
+\location{July 2013 \& July 2014 | Darien, CT} \\
+\begin{tightemize}
+\item Built the curriculum for beginner and advanced robotics courses for groups of 10- to 16-year-olds and led two sessions of these classes each summer. 
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{NYU Institute for Policy Integrity \\}
+\descript{Research Assistant }
+\location{June 2012 - Aug 2012 | New York University | New York, NY} \\
+\begin{tightemize}
+\item Conducted research for and edited \emph{The Globalization of Cost-Benefit Analysis in Environmental Policy}, eds. Richard L. Revesz and Michael A. Livermore, Oxford University Press, 2013.
+\end{tightemize}
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Activities
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Extracurricular Activities} 
+President, \location{Swarthmore Men's Rugby}\\
+\location{Varsity Track and Field} \\
+Member, \location{Housing Committee}\\ 
+Peer Counselor, \location{Speak2Swatties} \\
+Page One Editor, \location{The Phoenix} (Spring 2014) \\
+Financial Policy Representative, \location{Student Council} (Spring 2013 - Spring 2014) \\
+\location{Student Senate} (Fall 2012 - Spring 2013) \\
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Research}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards} 
+% \begin{tabular}{rll}
+% 2014	     & top 52/2500  & KPCB Engineering Fellow\\
+% 2014	     & 2\textsuperscript{nd} most points  & Google Code Jam, Qualification Round\\
+% \end{tabular}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Societies} 
+
+% \begin{tabular}{rll}
+% 2014 	& top 12\%ile    & Tau Beta Pi Engineering Honor Society\\
+% \end{tabular}
+% \sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
