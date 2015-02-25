@@ -1,0 +1,38 @@
+\section{Development}
+
+The development of our algorithm consisted of experimenting with various pre-processing techniques and statistical models. Based on these experiments, we decided to use a support vector machine (SVM) in tandem with a range of pre-processing methods. Our experimentation and final algorithm is described below.
+
+\subsection{Preprocessing} 
+We experimented with a number of pre-processing techniques while cultivating our final list of methods. In doing this, we looked at a number of previous SemEval participant results, especially \citet{tugas, choco, nrc}. In order to simplify the tweets for our statistical models, we explored case-folding, tokenization, part-of-speech tagging, and text normalization. 
+
+We ran our pre-processing tests on a Naive Bayes Classifier using cross-chunking across the SemEval training data. Performance results for the pre-processing test are in Table \ref{table:perfs} on page \pageref{table:perfs}.
+
+\subsubsection{Case-folding and text normalization}
+To simplify potential ambiguities across capitalization standards and usages, we converted all letters to lowercase. While this by itself seems to decrease performance across the board, we found that it contributed positively, if marginally, to other pre-processors. In addition, we replaced all URLs with \textit{<URL>} and all user handles (\textit{@user}) with \textit{<USER>}, following \citet{tugas}.
+
+\subsubsection{Tokenization and Part-of-Speech tagging}
+Tokenization is the process of separating a string of text into its constituent parts in order to more easily classify strings of characters. To facilitate this, we used the ArkTweetNLP tokenizer via a Python wrapper written by Richard Wicentowski of Swarthmore College \citep{ark}. The ArkTweetNLP tokenizer also facilitates part-of-speech tagging, which allowed us to further disambiguate between the various uses of individual words.
+
+\subsubsection{Negation Detector}
+We found that adding a negation detector significantly improved our scores, especially in the negative category.  We used an algorithm similar to the one outlined by \citet{potts}, which determined whether a word should be considered negated.  The algorithm did this by labelling words that appeared within a negation words "scope," which was determined by the presence of the word \textit{not} and the placement of end-of-phrase punctuation.
+
+\subsubsection{Bigrams and trigrams}
+In order to collect more features, we also experimented with using word bigrams and trigrams. We used the bigram and trigram features built into the Natural Language Toolkit (NLTK) \citep{nltk}.
+Implementing these individually significantly improved identification of negative tweets, increasing negative F1 from a baseline of 18.44 percent to 26.94 and 26.48, respectively. Combining the two of them resulted in an even greater F1 score of 38.23 percent, and layering them on top of the previous pre-processing methods led to the best base performance in Negative F1, at 40.24 percent. 
+
+\section{Training}
+We were able to access 8111 tagged tweets provided in the SemEval-2015 training set. In order to try to improve the accuracy of our negative sentiment detection, which hung significantly below neutral and positive sentiment detection in our basic tests. We considered using emoticons, which are ways that people independently tag sentiment in their writing, as a way of collecting large amounts of untagged data. Fortunately, we found that \citet{go} had already identified this possibility and built the Sentiment140 Lexicon, which was automatically compiled by identifying tweets containing positive and negative emoticons. This corpus contains 1,600,000 tweets, a small fraction of which collapses a Naive Bayes classifier. In the sections below, we discuss the different classifiers that we tested and their performance on the training data. We made great use of the implementations of these algorithms built into the Scikit-learn Python packages \citep{scikit}.
+
+\subsection{Presence and Frequency}
+Our representations used the bag-of-words approach, and we distinguished in our results in Table \ref{table:train} on Page \pageref{table:train} between presence, frequency, and term frequency-inverse document frequency (Tf-idf). Presence is a binary method of counting; a feature is either present or it is not, as opposed to the frequency approach, in which each instance of a feature is counted. Tf-idf weighting, on the other hand, is designed to lend extra weight to words which appear rarely and less weight to very common words. 
+
+
+\subsection{Naive Bayes Classifier}
+Naive Bayes Classifiers are relatively simple algorithms but often perform just as well (or better) than more complex algorithms.  Besides a Naive Bayes classifiers we built from scratch, we tried using two of scikit-learn's Naive Bayes implementations, BernoulliNB and MultinomialNB. MultinomialNB significantly outperformed BernoulliNB across the board, even when features were measured by presence (Bernoulli's expected input).
+
+
+\subsection{Support Vector Machine}
+Support Vector Machines (SVM) are a very effective method for classifying data.  Due to the fact that traditional SVMs do not scale that well when classifying textual data, we used LinearSVC, a significantly more performant derivation.  LinearSVC improved \AlgName\'s performance significantly, even moreso than the Naive Bayes Classifiers.
+
+
+

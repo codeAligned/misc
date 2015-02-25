@@ -1,0 +1,46 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{style}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage[hyphens]{url}
+\usepackage{balance}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{natbib}
+
+% Uncomment these to reduce/eliminate widow/orphan lines.
+%\widowpenalty=10000
+%\clubpenalty=10000
+%\sloppy
+
+\begin{document}
+\newcommand{\AlgName}{SHABURY}
+
+\date{}
+
+\title{SHABURY: A sentiment tagger for twitter data}
+
+\author{
+    Alec Pillsbury and Razi Shaban\\
+    Swarthmore College\\
+    \{apillsb1, rshaban1\}@cs.swarthmore.edu
+}
+
+\maketitle
+
+\input{00-abstract}
+\input{01-introduction}
+\input{02-development}
+\input{03-evaluation}
+\input{04-conclusion}
+\include{05-tables}
+
+\bibliographystyle{plainnat}
+\balance\bibliography{bibliography}
+
+\end{document}

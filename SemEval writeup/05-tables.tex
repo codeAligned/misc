@@ -1,0 +1,57 @@
+\begin{table}[t]
+\caption{Preprocessing performance comparison}
+\begin{tabular}{@{}llllll@{}}
+\toprule
+\textbf{Pre-processing} & \textbf{Accuracy} & \textbf{Overall Score} & \textbf{Negative F1} & \textbf{Neutral F1} & \textbf{Positive F1} \\ \midrule
+\textit{Raw data} & 62.11 & 41.11 & 18.44 & 68.60 & 63.77 \\
+\textit{Case-folding} & 61.95 & 40.40 & 16.82 & 68.26 & 63.97 \\
+\textit{Tokenization} & 63.72 & 43.46 & 20.79 & 69.47 & 66.12 \\
+\textit{POS tagger} & 63.79 & 42.84 & 19.44 & 69.74 & 66.23 \\
+\textit{Text normalization} & 62.39 & 41.62 & 19.52 & 69.01 & 63.73 \\
+\textit{Negation detection} & 61.96 & 42.97 & 22.19 & 68.11 & 63.75 \\
+\textit{Word bigrams} & 61.13 & 45.51 & 26.94 & 66.27 & 64.07 \\
+\textit{Word trigrams} & 61.41 & 45.40 & 26.48 & 66.46 & 64.32 \\
+\textit{Bigrams + trigrams} & 54.16 & 50.51 & 38.23 & 53.80 & 62.78 \\
+\textit{First five together} & 63.64 & 46.14 & 26.51 & 69.09 & 65.78 \\
+\textit{First five + bigrams} & 63.50 & 45.92 & 26.27 & 69.00 & 65.56 \\
+\textit{First five + bi/tri} & 61.34 & 53.10 & 40.24 & 63.62 & 65.97 \\ \bottomrule
+\end{tabular}
+\label{table:perfs}
+\end{table}
+
+\begin{table}[h]
+\caption{Training model comparison}
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+\textbf{Features} & \textbf{Count} & \textbf{Accuracy} & \textbf{Overall Score} & \textbf{Negative F1} & \textbf{Neutral F1} & \textbf{Positive F1} \\
+\toprule
+\textbf{MultinomialNB} & \textit{Frequency} & 63.70 & 46.71 & 27.58 & 69.01 & 65.84 \\
+\textit{+ trigram} & \textit{} & 61.16 & 52.12 & 38.47 & 63.61 & 65.78 \\
+ & \textit{Presence} & 63.98 & 46.88 & 27.41 & 69.26 & \textbf{66.35} \\
+\textit{+ trigram} & \textit{} & 60.64 & \textbf{53.53} & \textbf{41.37} & 62.18 & 65.70 \\
+ & \textit{Tf-idf} & 61.06 & 27.46 & 0.17 & 71.20 & 54.76 \\
+\textit{+ trigram} & \textit{} & \textbf{67.10} & 23.28 & 0.00 & \textbf{76.24} & 46.55 \\
+\toprule
+\textbf{LinearSVC} & \textit{Frequency} & 67.27 & 56.73 & 45.01 & 72.17 & 68.45 \\
+\textit{+ bigram} & \textit{} & \textbf{68.36} & 55.71 & 42.45 & \textbf{73.79} & \textbf{68.98} \\
+\textit{+ bi/trigram} & \textit{} & 67.78 & 52.42 & 36.62 & 73.54 & 68.22 \\
+ & \textit{Presence} & 67.30 & \textbf{57.20} & \textbf{46.12} & 72.05 & 68.28 \\
+\textit{+ bigram} & \textit{} & 67.67 & 54.48 & 40.15 & 73.01 & 68.81 \\
+\textit{+ bi/trigram} & \textit{} & 67.95 & 51.60 & 35.16 & 74.14 & 68.04 \\
+ & \textit{Tf-idf} & 66.93 & 54.00 & 41.92 & 72.96 & 66.09 \\
+\textit{+ bigram} & \textit{} & 65.73 & 49.67 & 35.35 & 72.68 & 64.04 \\
+\textit{+ bi/trigram} & \textit{} & 61.01 & 42.92 & 28.38 & 69.24 & 57.46 \\
+\textbf{LinearSVC+5k} & \textit{Frequency} & 65.84 & 56.15 & 45.57 & 70.53 & 66.73 \\
+\textit{+ bigram} &  & 66.18 & 54.27 & 41.29 & 71.29 & 67.26 \\
+\textit{+ trigram} &  & 65.28 & 50.49 & 35.18 & 71.07 & 65.81 \\
+\textbf{LinearSVC+10k} & \textit{Frequency} & 65.54 & 53.40 & 40.31 & 70.81 & 66.49 \\
+\textit{+ trigram} &  & 65.20 & 51.38 & 37.13 & 70.83 & 65.64 \\
+\textbf{LinearSVC+50k} & \textit{Frequency} & 66.05 & 54.14 & 41.07 & 71.14 & 67.21 \\
+\textit{+ trigram} &  & 65.22 & 51.03 & 36.36 & 70.93 & 65.70 \\
+\toprule
+\textbf{LogisticRegression} & \textit{Frequency} & \textbf{68.21} & \textbf{53.54} & \textbf{38.27} & \textbf{73.98} & \textbf{68.80} \\
++ \textit{trigram} &  & 67.15 & 49.37 & 31.69 & 73.66 & 67.04 \\
+\bottomrule
+\end{tabular}
+\label{table:train}
+\end{table}
