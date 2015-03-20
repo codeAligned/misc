@@ -10,7 +10,7 @@
 # O(m*log(m) * num_cases), where m = max_len(entries), as we can use
 # our longest entry as an upper bound for all of the entries.
 
-# solution to https://www.hackerrank.com/contests/101feb14/challenges/sherlock-and-pairs
+# accepted solution to https://www.hackerrank.com/contests/101feb14/challenges/sherlock-and-pairs
 # run: python infer.py < infer.test
 
 import sys
